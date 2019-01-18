@@ -1,77 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>main</title>
-	<!-- bootstrap -->
-	<link href="css/plugins/bootstrap.css" rel="stylesheet">
-	<!-- style -->
-	<link href="css/style.css" rel="stylesheet">
-	<!-- google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet"> 
-</head>
-<body>
-	<div class="wrapper">
-		<header>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="logo">
-							<img src="img/logo.png" alt="">
-						</div>
-						<div class="header-right">
-							<ul>
-								<li>
-									<a href="#">
-										Services
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										About us
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Contact
-									</a>
-								</li>
-							</ul>
-							<div class="phone">
-								<a href="tel:01273 505800">
-									<i class="icone-phone"></i>
-									01273 505800
-								</a>
-							</div>
-						</div>
-						<div class="mobile-menu">
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<section class="section-get-touch">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<img src="img/seahorse-2-stamp.svg" alt="">
-						<h1>
-							Hennings Solicitors offers clients a highly effective legal service with rigorous professional standards.
-						</h1>
-						<div class="link-page">
-							<a href="#">
-								Get in touch
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<?php /*Template Name: Home*/ ?>
+<?php get_template_part( 'template_parts/global/header' ); ?>
+<?php get_template_part( 'template_parts/main_page/get-in-touch-section' ); ?>
+
+
 		<section class="section-our-services">
 			<div class="container-fluid">
 				<div class="row">
@@ -82,7 +13,7 @@
 						<div class="services-items items-more" data-show-more='services-items'>
 							<div class="item">
 								<a href="#">
-									<img src="img/residential-conveyancing-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/residential-conveyancing-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -97,7 +28,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/commercial-conveyancing-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/commercial-conveyancing-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -111,7 +42,7 @@
 								</div>
 							</div>
 							<div class="item">
-								<img src="img/powers-of-attorney-icon.svg" alt="">
+								<img src="<?php bloginfo('template_url'); ?>/img/powers-of-attorney-icon.svg" alt="">
 								<div class="link">
 									<a href="#">
 										Powers of Attorney
@@ -126,7 +57,7 @@
 
 							<div class="item">
 								<a href="#">
-									<img src="img/wills-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/wills-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -141,7 +72,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/buying-or-selling icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/buying-or-selling icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -156,7 +87,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/quotes-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/quotes-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -172,7 +103,7 @@
 
 							<div class="item">
 								<a href="#">
-									<img src="img/auction-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/auction-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -187,7 +118,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/transfers-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/transfers-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -202,7 +133,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/remorgages-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/remorgages-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -217,7 +148,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/lease-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/lease-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -232,7 +163,7 @@
 							</div>
 							<div class="item">
 								<a href="#">
-									<img src="img/trust-deeds-icon.svg" alt="">
+									<img src="<?php bloginfo('template_url'); ?>/img/trust-deeds-icon.svg" alt="">
 								</a>
 								<div class="link">
 									<a href="#">
@@ -258,11 +189,13 @@
 				</div>
 			</div>
 		</section>
+
+		
 		<section class="section-blockquote">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<img src="img/seahorse.svg" alt="">
+						<img src="<?php bloginfo('template_url'); ?>/img/seahorse.svg" alt="">
 						<p>
 							We are always interested to hear from you, 
 							<br>
@@ -307,7 +240,7 @@
 								</ul>
 							</div>
 							<div class="item">
-								<img src="img/footer-img.jpg" alt="">
+								<img src="<?php bloginfo('template_url'); ?>/img/footer-img.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -334,12 +267,6 @@
 			</div>
 		</div>
 	</footer>
-	<!-- script -->
-		<script src="js/jquery/jquery-2.1.4.min.js"></script>
-		<!-- functions -->
-		<script src="js/function.js"></script>
-		<!-- include_plugins -->
-		<script src="js/include_plugins.js"></script>
-	<!-- script -->
+	<?php wp_footer(); ?>
 </body>
 </html>

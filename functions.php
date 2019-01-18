@@ -4,17 +4,10 @@
 function add_style() {
 	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/plugins/bootstrap.css' );
 	wp_enqueue_style( 'base_style', get_stylesheet_directory_uri() . '/css/style.css' );
-	wp_enqueue_style( 'less', get_stylesheet_directory_uri() . '/css/less.css' );
-	wp_enqueue_style( 'responsive', get_stylesheet_directory_uri() . '/css/responsive.css' );
-	wp_enqueue_style( 'fa', get_stylesheet_directory_uri() . '/css/plugins/_font-awesome.min.css' );
-
-	// load styles only for special template
-	if ( is_page_template(array('template-faq.php')) ) {
-		wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/css/plugins/slick.css' );
-	}
+	wp_enqueue_style( 'lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
+	wp_enqueue_style( 'roboto-slab-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'add_style' );
-
 
 
 function enqueue_scripts() {
@@ -64,8 +57,11 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 
-//------------------------------------------------------------------------------------include additional features
-require_once ( get_template_directory() .'/inc/functions/customizr.php' );
+//------------------------------------------------------------------------------------include theme customizer features
+require_once ( get_template_directory() .'/functions/customizr.php' );
+
+//------------------------------------------------------------------------------------metaboxes
+require_once ( get_template_directory() .'/functions/metaboxes.php' );
 
 
 
@@ -75,6 +71,45 @@ function admin_css(){
 	wp_register_style('admin_css', get_bloginfo('template_url').'/css/admin_css.css', false, '1.0.0');
 	wp_enqueue_style('admin_css');
 }
+
+//------------------------------------------------------------------------------------menus
+function register_menus() { 
+	register_nav_menus(
+		array( 
+			'header_menu' => 'Header menu'
+		)
+	);
+}
+
+add_action( 'init', 'register_menus' );
+
+
+//------------------------------------------------------------------------------------logotype
+function logotype(){
+	
+	$logo_path = get_bloginfo('template_url').'/img/logo.png';
+	
+	echo '<div class="logo">';
+		if (is_front_page()){ 
+			echo "<img src = '".$logo_path."' alt='".get_bloginfo('name')."'>";
+		} else{
+			echo "<a href = '".esc_url( home_url( '/' ) )."'><img src='".$logo_path."' alt='".get_bloginfo('name')."'></a>";
+		}
+	echo '</div>';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,10 +125,6 @@ if ( function_exists( 'add_image_size' ) ) {
 	// add_image_size( 'homepage-thumb', 220, 180, true ); // Crop the image
 	// add_image_size( 'homepage-thumb', 220, 180, array( 'top', 'left' ) ); // crop position
 }
-
-
-// Enable shortcodes in text widgets
-add_filter('widget_text','do_shortcode');
 
 
 
@@ -121,34 +152,8 @@ function register_widgets(){
 add_action( 'widgets_init', 'register_widgets' );
 
 
-//------------------------------------------------------------------------------------menus
-function register_menus() { 
-	register_nav_menus(
-		array( 
-			'header_menu' => 'Header menu'
-		)
-	);
-}
-
-add_action( 'init', 'register_menus' );
 
 
-//------------------------------------------------------------------------------------logotype
-function logotype(){
-	if (get_theme_mod('logo_upload')) {
-		$logo_path = get_theme_mod('logo_upload');
-	} else{
-		$logo_path = get_bloginfo('template_url').'/svg/logo.svg';
-	}
-	
-	echo '<div class="logo">';
-		if (is_front_page()){ 
-			echo "<img src = '".$logo_path."' alt='".get_bloginfo('name')."'>";
-		} else{
-			echo "<a href = '".esc_url( home_url( '/' ) )."'><img src='".$logo_path."' alt='".get_bloginfo('name')."'></a>";
-		}
-	echo '</div>';
-}
 
 
 //------------------------------------------------------------------------------------change pagination output

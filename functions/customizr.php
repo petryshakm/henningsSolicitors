@@ -11,34 +11,35 @@ function theme_customize_register($wp_customize){
 	$wp_customize->add_section('header_info',
 		array(
 			'title' 	=> "Header settings",
-			'description' => '',
+			'description' => 'all global header blocks',
 		)
 	);
 
 
-	// --------------------------------upload logo
-	$wp_customize->add_setting(
-	    'logo_upload',
-	    array(
-	        'default'      => '',
-	        'transport'    => 'refresh'
-	    )
+	//--------------------------------header settings
+	$all_fields = array(
+		array('phone_number', 'Phone number', 'text')
 	);
 
-	$wp_customize->add_control( 
-		new WP_Customize_Upload_Control( 
-		$wp_customize, 
-		'logo_upload', 
-		array(
-			'label'      => __( 'Logotype'),
-			'description'=> 'will be used for footer also',
-			'section'    => 'header_info',
-			'settings'   => 'logo_upload',
-		) ) 
-	);
+	foreach ($all_fields as $s) {
+		$wp_customize->add_setting($s[0],
+			array(
+				'default'	=>	'',
+				'transport' =>	'refresh'
+				)
+		);
 
-
-
+		$wp_customize->add_control(
+			new WP_Customize_Control($wp_customize, $s[0],
+				array(
+					'label'		=> $s[1],
+					'section'	=> 'header_info',
+					'settings'	=> $s[0],
+					'type'		=> $s[2],	
+				)
+			)
+		);
+	} //end foreach
 
 	//----------------------------------------------------------------------------------------------------footer settings
 	$wp_customize->add_section('footer_info',
