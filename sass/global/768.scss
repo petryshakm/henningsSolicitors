@@ -1,0 +1,27 @@
+.services-items .item{
+	min-height: 0;
+}
+.services-items .item img{
+	width: 100px;
+	margin-bottom: 0;
+}
+.services-items .item .link{
+	font-size: 16px;
+	line-height: 22px;
+}
+.services-items .item .link-more{
+	font-size: 13px;
+}
+footer .top .items{
+	display: inline-block;
+}
+footer .top .items .item:first-child{
+	margin-bottom: 30px;
+}
+footer .bottom .items a{
+	margin-left: 0;
+}
+.section-our-services p{
+	font-size: 18px;
+	margin: 0 auto 50px;
+}

@@ -1,0 +1,30 @@
+// global import
+@import "global/variables.scss";
+@import "global/style.scss";
+@import "global/header.scss";
+@import "global/our-services.scss";
+@import "global/footer.scss";
+@import "global/title-page.scss";
+//main page
+@import "main-page/style.scss";
+
+
+
+
+
+// responsive media
+@media (max-width: 1200px){
+	@import "global/1200.scss";
+}
+@media (max-width: 992px){
+	@import "global/992.scss";
+	@import "main-page/992.scss";
+}
+@media (max-width: 768px){
+	@import "global/768.scss";
+	@import "main-page/768.scss";
+}
+@media (max-width: 480px){
+	@import "global/480.scss";
+	@import "main-page/480.scss";
+}

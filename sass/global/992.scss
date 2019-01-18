@@ -1,0 +1,63 @@
+.wrapper{
+	position: relative;
+	transition: transform 0.4s;
+	transform: translate(0px);
+}
+.wrapper.active{
+	transform: translate(-250px);
+}
+header .mobile-menu{
+	display: block;
+}
+header ul li{
+	margin-left: 30px;
+	margin-bottom: 17px;
+}
+header .header-right{
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	width: 250px;
+	transform: translate(250px);
+	height: 100vh;
+	padding: 20px 20px;
+}
+header ul li{
+	display: block;
+	margin-left: 0;
+}
+header .phone{
+	margin-left: 0;
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	width: 100%;
+	padding: 0 20px;
+}
+header .phone a{
+	width: 100%;
+	text-align: center;
+}
+.services-items .item{
+	width: 48%;
+}
+.services-items .item,
+.services-items .item:nth-child(3n){
+	margin-right: 4%;
+}
+.services-items .item:nth-child(2n){
+	margin-right: 0;
+}
+footer .top .items .item:first-child{
+	width: 400px;
+}
+footer .bottom .items{
+	display: block;
+}
+footer .bottom .items .item{
+	margin-bottom: 10px;
+}
+footer .bottom .items .item:last-child{
+	margin-bottom: 0;
+}

@@ -1,0 +1,39 @@
+.section-get-touch{
+	padding: 101px 0 124px;
+	background: url(../img/hero-image.jpg) 50% top no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	.container-fluid{
+		max-width: 990px;
+	}
+	img{
+		margin-bottom: 42px;
+	}
+	h1, .h1{
+		font-family: $font-roboto;
+		font-size: 48px;
+		line-height: 58px;
+		font-weight: 300;
+		margin-bottom: 54px;
+	}
+}
+.section-blockquote{
+	background-color: #ecf5f6;
+	padding: 104px 0 92px;
+	text-align: center;
+	.container-fluid{
+		max-width: 710px;
+	}
+	img{
+		margin-bottom: 23px;
+	}
+	p{
+		font-family: $font-roboto;
+		font-size: 28px;
+		line-height: 37px;
+		font-weight: 300;
+		text-align: center;
+		color: #00757f;
+	}
+}
