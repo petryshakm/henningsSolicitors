@@ -99,6 +99,29 @@ function logotype(){
 }
 
 
+//------------------------------------------------------------------------------------image_output
+function simple_image_output($image_url, $image_alt, $image_classes){
+	// retrieve image html with url and alt 
+
+	$image_classes_code = (($image_classes) ? 'class = "'.$image_classes.'"' : '');
+
+
+	if ($image_url) {
+		return '<img src = "'.$image_url.'" alt = "'.$image_alt.'" '.$image_classes_code.'>';
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -185,16 +208,7 @@ function background_image_css($image_url){
 }
 
 
-function simple_image_output($image_url, $image_alt, $image_classes){
-	// retrieve image html with url and alt 
 
-	$image_classes_code = (($image_classes) ? 'class = "'.$image_classes.'"' : '');
-
-
-	if ($image_url) {
-		return '<img src = "'.$image_url.'" alt = "'.$image_alt.'" '.$image_classes_code.'>';
-	}
-}
 
 //------------------------------------------------------------------------------------cycle links
 function no_link_current_page( $p ) {
