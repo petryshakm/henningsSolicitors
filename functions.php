@@ -124,33 +124,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 // 	// add_image_size( 'homepage-thumb', 220, 180, array( 'top', 'left' ) ); // crop position
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //------------------------------------------------------------------------------------remove generator meta
 remove_action( 'wp_head', 'wp_generator' );
 
@@ -159,7 +132,7 @@ remove_action( 'wp_head', 'wp_generator' );
 //------------------------------------------------------------------------------------widgets
 function register_widgets(){
 	register_sidebar(array(
-		'name'          => 'Title',
+		'name'          => 'Sidebar',
 		'id'            => 'sidebar',
 		'description'   => '',
 		'before_widget' => '<div class="single-widget-item">',
@@ -173,6 +146,32 @@ function register_widgets(){
 
 
 add_action( 'widgets_init', 'register_widgets' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

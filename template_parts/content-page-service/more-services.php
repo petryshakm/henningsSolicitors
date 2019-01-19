@@ -1,26 +1,27 @@
-<hr>
-<h3>
-	More services
-</h3>
-<div class="more-services-items">
-	<div class="item">
-		<a href="#">
-			Commercial Conveyancing
-		</a>
-	</div>
-	<div class="item">
-		<a href="#">
-			Buying or Selling a Business
-		</a>
-	</div>
-	<div class="item">
-		<a href="#">
-			Powers of Attorney
-		</a>
-	</div>
-	<div class="item">
-		<a href="#">
-			Wills and Probate
-		</a>
-	</div>
-</div>
+<?php  
+$more_services = get_post_meta( $post->ID, 'more_services', true );
+
+if (!empty($more_services)) {
+
+	$args = array(
+	    'post_type'         => 'post',
+	    'post_status'       => 'publish',
+	    'orderby'           => 'date',
+	    'order'             => 'ASC',
+	    'post__in'			=> $more_services
+	);
+
+	$services_query = new WP_Query( $args );
+	if ( $services_query->have_posts() ) {
+		echo '
+			<hr>
+			<h3>More services</h3>
+			<div class="more-services-items">';
+			    while ( $services_query->have_posts() ) { $services_query->the_post();
+					get_template_part('template_parts/content-page-service/service-item-simple');
+			    }
+		echo '</div>';
+	}
+	wp_reset_postdata();
+}
+?>

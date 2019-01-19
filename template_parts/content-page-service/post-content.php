@@ -14,11 +14,8 @@
 
 					<?php get_template_part( 'template_parts/content-page-service/more-services' ); ?>
 				</article>
+
 				<?php get_sidebar(); ?>
-			
-
-
-
 			</div>
 		</div>
 	</div>

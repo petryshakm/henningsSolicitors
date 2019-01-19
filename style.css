@@ -1,11 +1,8 @@
 /*  
-Theme Name: New_theme
-Theme URI:
-Description: Custom theme for Company_name
+Theme Name: Hennings Solicitors
+Description: Custom theme 
 Version: 1.0
-Author: ArtLab
-Author URI: http://artlab.in.ua/
-Text Domain: new-theme
+Text Domain: hennings-solicitors-theme
 */
 
 
@@ -39,7 +36,13 @@ Text Domain: new-theme
 
 
 
-
+.section-content .aside-block *{
+	font-size: 24px;
+	color: #00757f;
+}
+.section-content .aside-block a{
+	color: #07A7DD;
+}
 
 
 
