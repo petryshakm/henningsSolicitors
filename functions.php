@@ -111,43 +111,43 @@ function simple_image_output($image_url, $image_alt, $image_classes){
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //------------------------------------------------------------------------------------thumbnails
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 333, 221 ); // default thumb size
+		set_post_thumbnail_size( 130, 130 ); // default thumb size
 }
 
 
-if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'category-thumb', 300, 9999 ); // 300 width and any height
-	// add_image_size( 'homepage-thumb', 220, 180, true ); // Crop the image
-	// add_image_size( 'homepage-thumb', 220, 180, array( 'top', 'left' ) ); // crop position
-}
+// if ( function_exists( 'add_image_size' ) ) {
+// 	add_image_size( 'category-thumb', 300, 9999 ); // 300 width and any height
+// 	// add_image_size( 'homepage-thumb', 220, 180, true ); // Crop the image
+// 	// add_image_size( 'homepage-thumb', 220, 180, array( 'top', 'left' ) ); // crop position
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -179,45 +179,9 @@ add_action( 'widgets_init', 'register_widgets' );
 
 
 
-//------------------------------------------------------------------------------------change pagination output
-add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
-function my_navigation_template( $template, $class ){
-	/*
-	Basic template:
-	<nav class="navigation %1$s" role="navigation">
-		<h2 class="screen-reader-text">%2$s</h2>
-		<div class="nav-links">%3$s</div>
-	</nav>
-	*/
-
-	return '
-		%3$s   
-	';
-}
-
-
-//------------------------------------------------------------------------------------background image using css style attr 
-function background_image_css($image_url){
-	// retrieve background image in html
-
-	if($image_url) {
-		return "style = 'background-image: url(".$image_url.");'";
-	} else {
-		return "";
-	}
-}
 
 
 
-
-//------------------------------------------------------------------------------------cycle links
-function no_link_current_page( $p ) {
-    return preg_replace( '%((current_page_item|current-menu-item)[^<]+)[^>]+>([^<]+)</a>%', '$1<span>$3</span>', $p, 1 );
-}
-
-add_filter( 'wp_list_pages', 'no_link_current_page' );
-add_filter( 'widget_categories_args', 'no_link_current_page' );
-add_filter('wp_nav_menu', 'no_link_current_page');
 
 
 

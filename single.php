@@ -1,15 +1,8 @@
-<?php  
+<?php get_template_part( 'template_parts/global/header' ); ?>
 
-// echo 
-$custom_attach = get_post_meta( $post->ID, 'wp_custom_attachment', true );
+<?php get_template_part( 'template_parts/global/page-title' ); ?>
 
+<?php get_template_part( 'template_parts/content-page-service/post-content' ); ?>
 
-echo '<pre>'; 
-print_r($custom_attach); 
-echo '</pre>';
+<?php get_template_part( 'template_parts/global/footer' ); ?>
 
-
-
-
-
-?>

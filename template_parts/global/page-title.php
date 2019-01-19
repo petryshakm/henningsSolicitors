@@ -1,5 +1,11 @@
 <section class="section-title">
 	<h1>
-		<?php the_title(); ?>
+		<?php  
+			if (is_single()) {
+				echo 'Our Services';
+			} else{
+				the_title();
+			}
+		?>
 	</h1>
 </section>
