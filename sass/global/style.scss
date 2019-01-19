@@ -1113,8 +1113,22 @@ h2, .h2{
 	font-weight: 300;
 	color: #00757f;
 	text-align: center;
-	letter-spacing: 1.4px;
 	margin-bottom: 39px;
+	font-family: $font-roboto;
+}
+h3, .h3{
+	font-size: 28px;
+	font-weight: 300;
+	color: #00757f;
+	margin-bottom: 50px;
+	font-family: $font-roboto;
+}
+h4, .h4{
+	font-size: 24px;
+	font-weight: 300;
+	color: #00757f;
+	margin-bottom: 12px;
+	font-family: $font-roboto;
 }
 p{
 	a{
@@ -1125,7 +1139,11 @@ p{
 		}
 	}
 }
-
+hr{
+	margin: 32px 0 20px;
+	border-width: 2px;
+	border-color: #b2d1d4;
+}
 
 
 

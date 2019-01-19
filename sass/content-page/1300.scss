@@ -1,0 +1,20 @@
+.section-content .img-left img{
+	width: 90px;
+}
+.section-content article{
+	padding-left: 95px;
+}
+.section-content .img-left{
+	top: 0;
+}
+.section-content aside{
+	max-width: 100%;
+	width: 350px;
+}
+.section-content article{
+	width: calc(100% - 390px);
+}
+.section-content p{
+	font-size: 16px;
+	line-height: 26px;
+}

@@ -41,6 +41,7 @@ function theme_customize_register($wp_customize){
 		);
 	} //end foreach
 
+
 	//----------------------------------------------------------------------------------------------------footer settings
 	$wp_customize->add_section('footer_info',
 		array(
@@ -52,18 +53,20 @@ function theme_customize_register($wp_customize){
 
 	//--------------------------------footer settings
 	$all_fields = array(
-		array('follow_us_text', 'Follow us text', 'text'),
-		array('fb_link', 'Facebook link', 'text'),
-		array('f_phone_1', 'Phone number 1', 'text'),
-		array('f_phone_2', 'Phone number 2', 'text'),
-		array('f_adress', 'Adress', 'textarea'),
+		array('footer_title', 'Title', 'text'),
+		array('footer_address', 'Address', 'textarea'),
+		array('footer_phones', 'Phones', 'textarea'),
+		array('footer_copyright', 'Copyright text', 'text'),
+		array('footer_text', 'Additinal text', 'textarea'),
+		array('privacy_policy_link', 'Privacy policy page', 'dropdown-pages')
+
 	);
 
 	foreach ($all_fields as $s) {
 		$wp_customize->add_setting($s[0],
 			array(
 				'default'	=>	'',
-				'transport' =>	'postMessage'
+				'transport' =>	'refresh'
 				)
 		);
 
@@ -78,6 +81,28 @@ function theme_customize_register($wp_customize){
 			)
 		);
 	} //end foreach
+
+	// --------------------------------quality logo
+	$wp_customize->add_setting(
+	    'quality_logo',
+	    array(
+	        'default'      => '',
+	        'transport'    => 'refresh'
+	    )
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Upload_Control( 
+		$wp_customize, 
+		'quality_logo', 
+		array(
+			'label'      => __( 'Quality logo'),
+			'description'=> '',
+			'section'    => 'footer_info',
+			'settings'   => 'quality_logo',
+		) ) 
+	);
+
 	
 }
 
