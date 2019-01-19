@@ -14,9 +14,6 @@ function enqueue_scripts() {
 	wp_register_script( 'function', get_template_directory_uri() . '/js/function.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'function' );
 
-	wp_register_script( 'include_plugins', get_template_directory_uri() . '/js/include_plugins.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'include_plugins' );
-	
 	wp_register_script( 'theme_settings', get_template_directory_uri() . '/js/theme-settigns.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'theme_settings' );
 
