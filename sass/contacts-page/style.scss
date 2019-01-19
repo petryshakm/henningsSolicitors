@@ -1,0 +1,53 @@
+.section-contacts{
+	padding: 93px 0 0;
+	.container-fluid{
+		max-width: 1200px;
+	}
+	.row-top{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		margin-bottom: 90px;
+		&:after{
+			content: none;
+		}
+		.col-lg-7{
+			width: 60%;
+		}
+		.col-lg-5{
+			width: 35%;
+		}
+	}
+	form{
+		p{
+			font-size: 14px;
+			a{
+				color: $color-blue;
+				text-decoration: underline;
+				display: inline-block;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.contact-info{
+		h5, .h5{
+			margin-bottom: 10px;
+		}
+		ul{
+			margin-bottom: 30px;
+			li{
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.col-lg-5{
+		padding: 40px 40px 20px;
+		font-size: 14px;
+		background-color: #fafafa;
+		a:hover{
+			color: $color-blue;;
+		}
+	}
+}

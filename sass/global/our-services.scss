@@ -10,6 +10,9 @@
 		max-width: 920px;
 		margin: 14px auto 83px;
 	}
+	h2, .h2{
+		text-align: center;
+	}
 }
 .services-items{
 	display: flex;
@@ -58,6 +61,37 @@
 		&.active{
 			.item{
 				display: block !important;
+			}
+		}
+	}
+}
+.about-us-items{
+	display: flex;
+	flex-wrap: wrap;
+	.item{
+		width: 31.4%;
+		margin-right: 2.9%;
+		margin-bottom: 39px;
+		font-size: 18px;
+		font-weight: 700;
+		a{
+			&:hover{
+				color: $color-blue;
+			}
+		}
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+		img{
+			width: 100%;
+			display: block;
+			margin-bottom: 15px;
+		}
+		span{
+			display: block;
+			&:last-child{
+				font-weight: 400;
+				font-size: 16px;
 			}
 		}
 	}

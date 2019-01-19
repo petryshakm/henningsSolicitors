@@ -7,15 +7,17 @@
 @import "global/title-page.scss";
 //main page
 @import "main-page/style.scss";
+//content-page
 @import "content-page/style.scss";
-
+// 
+@import "contacts-page/style.scss";
 
 
 
 
 // responsive media
 @media (max-width: 1300px){
-@import "content-page/1300.scss";
+	@import "content-page/1300.scss";
 }
 @media (max-width: 1200px){
 	@import "global/1200.scss";
@@ -24,14 +26,17 @@
 	@import "global/992.scss";
 	@import "main-page/992.scss";
 	@import "content-page/992.scss";
+	@import "contacts-page/992.scss";
 }
 @media (max-width: 768px){
 	@import "global/768.scss";
 	@import "main-page/768.scss";
 	@import "content-page/768.scss";
+	@import "contacts-page/768.scss";
 }
 @media (max-width: 480px){
 	@import "global/480.scss";
 	@import "main-page/480.scss";
 	@import "content-page/480.scss";
+	@import "contacts-page/480.scss";
 }

@@ -10,6 +10,10 @@ jQuery(document).ready(function($) {
 		var th_attr = $(this).attr('data-show-more');
 		$('*[data-show-more]').not($(this)).addClass('active');
 		$(this).hide(0);
-
 	});
+	// clone phone
+	var clone_phone = $('header .phone').clone().addClass('phone-mobile');
+	$('footer').after(clone_phone)
+
+
 });

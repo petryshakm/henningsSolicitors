@@ -7,21 +7,22 @@
 						<?php the_content(); ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
-
-				<div class="services-items">
+				
+				<div class="about-us-items">
 					<?php  
 						$args = array(
-							'post_type' 		=> 'post',
+							'post_type' 		=> 'page',
 							'post_status' 		=> 'publish',
 							'posts_per_page' 	=> -1,
-							'orderby'			=> 'date',
-							'order'				=> 'ASC'
+							'orderby'			=> 'menu_order',
+							'order'				=> 'ASC',
+							'post_parent'		=> $post->ID
 						);
 
-						$services_query = new WP_Query( $args );
-						if ( $services_query->have_posts() ) {
-							while ( $services_query->have_posts() ) { $services_query->the_post();
-								get_template_part('template_parts/global/service-item');
+						$aboutUs_query = new WP_Query( $args );
+						if ( $aboutUs_query->have_posts() ) {
+							while ( $aboutUs_query->have_posts() ) { $aboutUs_query->the_post();
+								get_template_part('template_parts/about-us/person-item');
 							}
 						}
 						wp_reset_postdata();

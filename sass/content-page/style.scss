@@ -52,6 +52,7 @@
 		font-family: $font-roboto;
 		font-size: 16px;
 		color: #00757f;
+		padding-top: 11px;
 		.item{
 			width: 47%;
 			background: #fff;
@@ -59,6 +60,7 @@
 			box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.15);
 			text-align: center;
 			transition: box-shadow 0.3s;
+
 			&:hover{
 				box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.25);
 			}
@@ -68,24 +70,29 @@
 				display: block;
 				padding: 29px 15px;
 				cursor: pointer;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				flex-direction: column;
 			}
 		}
 	}
+	ul, ol{
+		padding-left: 10px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		li{
+			padding-left: 8px;
+		}
+	}
+	ul{
+		li{
+		list-style: disc;
+		}
+	}
+	ol{
+		li{
+			list-style: decimal;
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

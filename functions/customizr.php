@@ -10,15 +10,20 @@ function theme_customize_register($wp_customize){
 	//----------------------------------------------------------------------------------------------------header settings
 	$wp_customize->add_section('header_info',
 		array(
-			'title' 	=> "Header settings",
-			'description' => 'all global header blocks',
+			'title' 	=> "Header + Contacts settings",
+			'description' => 'all global header and contacts data',
 		)
 	);
 
 
 	//--------------------------------header settings
 	$all_fields = array(
-		array('phone_number', 'Phone number', 'text')
+		array('phone_number', 'Phone number', 'text'),
+		array('admin_email', 'Email', 'text'),
+		array('fb_link', 'FB link', 'text'),
+		array('tw_link', 'Twitter link', 'text'),
+		array('ins_link', 'Instagram link', 'text'),
+		array('gpl_link', 'Google+ link', 'text')
 	);
 
 	foreach ($all_fields as $s) {
@@ -46,7 +51,7 @@ function theme_customize_register($wp_customize){
 	$wp_customize->add_section('footer_info',
 		array(
 			'title' 	=> "Footer settings",
-			'description' => '',
+			'description' => 'Some settings are used on Contact page',
 		)
 	);
 

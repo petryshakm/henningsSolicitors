@@ -1,11 +1,21 @@
-.services-items{
+.services-items,
+.about-us-items
+{
 	display: block;
 }
-.services-items .item{
+.services-items .item,
+.about-us-items .item
+{
 	width: 100%;
 	margin-right: 0;
 }
 footer .top .items .item:first-child{
 	display: block;
 	width: 100%;
+}
+.section-title{
+	padding: 40px 15px;
+}
+.section-title h1, .section-title .h1{
+	font-size: 38px;
 }

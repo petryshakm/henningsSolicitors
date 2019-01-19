@@ -1,5 +1,4 @@
 .wrapper{
-	position: relative;
 	transition: transform 0.4s;
 	transform: translate(0px);
 }
@@ -14,6 +13,9 @@ header ul li{
 	margin-bottom: 17px;
 }
 header .header-right{
+	display: block;
+}
+header .header-right ul{
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -28,27 +30,66 @@ header ul li{
 	margin-left: 0;
 }
 header .phone{
-	margin-left: 0;
-	position: absolute;
+	display: none;
+}
+body{
+	padding-bottom: 45px;
+}
+.phone.phone-mobile{
+	display: block;
+	position: fixed;
+	z-index: 99;
 	left: 0;
-	bottom: 25px;
+	bottom: 0;
 	width: 100%;
-	padding: 0 20px;
+	text-align: center;
+	a{
+		padding: 10px 15px;
+		display: block;
+		width: 100%;
+		background: #05a6dd;
+		color: #fff;
+		font-size: 18px;
+		i{
+			position: relative;
+			top: 1px;
+			margin-right: 10px;
+			&:before{
+				opacity: 0;
+			}
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
 }
 header .phone a{
 	width: 100%;
 	text-align: center;
 }
-.services-items .item{
+.services-items .item,
+.about-us-items .item{
 	width: 48%;
 }
 .services-items .item,
-.services-items .item:nth-child(3n){
+.services-items .item:nth-child(3n),
+.about-us-items .item,
+.about-us-items .item:nth-child(3n)
+{
 	margin-right: 4%;
 }
-.services-items .item:nth-child(2n){
+.services-items .item:nth-child(2n),
+.about-us-items .item:nth-child(2n){
 	margin-right: 0;
 }
+
+
+
+
+
+
+
+
 footer .top .items .item:first-child{
 	width: 400px;
 }
