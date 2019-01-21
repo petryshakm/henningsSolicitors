@@ -95,4 +95,12 @@
 			list-style: decimal;
 		}
 	}
+	&.inner-page{
+		article{
+			padding-left: 0;
+			&:last-child{
+				width: 100%;
+			}
+		}
+	}
 }

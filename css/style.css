@@ -1413,6 +1413,10 @@ footer {
     list-style: disc; }
   .section-content ol li {
     list-style: decimal; }
+  .section-content.inner-page article {
+    padding-left: 0; }
+    .section-content.inner-page article:last-child {
+      width: 100%; }
 
 .section-contacts {
   padding: 93px 0 0; }
