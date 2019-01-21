@@ -9,7 +9,7 @@ $get_in_touch_email = get_post_meta( $post->ID, 'get_in_touch_email', true );
 			<div class="col-lg-12">
 				<img src="<?php bloginfo('template_url'); ?>/img/seahorse-2-stamp.svg" alt="seahorse">
 				<?php if ($main_title) { ?>
-					<h1><?php echo $main_title; ?></h1>';
+					<h1><?php echo $main_title; ?></h1>
 				<?php } ?>
 
 				<?php if ($get_in_touch_email) { ?>
