@@ -996,7 +996,8 @@ label {
     height: 40px;
     border: 1px solid #ccc;
     padding: 0 15px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    background: #fff; }
     label input:focus, label select:focus, label textarea:focus {
       border-color: #05a6dd; }
   label textarea {
@@ -1013,19 +1014,22 @@ label {
   margin-top: 30px; }
   .submit input, .submit button {
     display: inline-block;
-    padding: 15px 30px;
-    background: #fff;
-    border: 2px solid #05a6dd;
+    border-radius: 4px;
+    border: 1px solid #05a6dd;
+    padding: 11px 20px;
     color: #05a6dd;
-    border-radius: 44px;
-    font-size: 18px;
     font-weight: 700;
+    background: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
     .submit input:hover, .submit button:hover {
       background: #05a6dd;
       color: #fff; }
+      .submit input:hover i:before, .submit button:hover i:before {
+        opacity: 0; }
+      .submit input:hover i:after, .submit button:hover i:after {
+        opacity: 1; }
 
 .social {
   font-size: 24px;
@@ -1171,7 +1175,24 @@ header {
     margin-right: 2.9%;
     margin-bottom: 39px;
     text-align: center;
-    padding: 23px 20px; }
+    padding: 23px 20px;
+    position: relative;
+    -webkit-transition: -webkit-box-shadow 0.3s;
+    transition: -webkit-box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
+    .services-items .item:hover {
+      -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3); }
+    .services-items .item > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
     .services-items .item:nth-child(3n) {
       margin-right: 0; }
     .services-items .item img {
@@ -1208,12 +1229,20 @@ header {
     font-weight: 700; }
     .about-us-items .item a:hover {
       color: #05a6dd; }
+      .about-us-items .item a:hover img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); }
     .about-us-items .item:nth-child(3n) {
       margin-right: 0; }
     .about-us-items .item img {
       width: 100%;
       display: block;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      -webkit-transition: -webkit-filter 0.3s;
+      transition: -webkit-filter 0.3s;
+      -o-transition: filter 0.3s;
+      transition: filter 0.3s;
+      transition: filter 0.3s, -webkit-filter 0.3s; }
     .about-us-items .item span {
       display: block; }
       .about-us-items .item span:last-child {
