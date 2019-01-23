@@ -2,13 +2,16 @@
 
 //------------------------------------------------------------------------------------------main title
 function add_more_services() {
+
     global $post;
-    add_meta_box(
-        'more_services',           
-        'More services',  
-        'more_services', 
-        'post'
-    );
+    if (has_category( 'services', $post)) {
+        add_meta_box(
+            'more_services',           
+            'More services',  
+            'more_services', 
+            'post'
+        );
+    }
 }
 add_action('add_meta_boxes', 'add_more_services');
 
@@ -23,7 +26,8 @@ function more_services($post){
         'post_status'       => 'publish',
         'posts_per_page'    => -1,
         'orderby'           => 'date',
-        'order'             => 'ASC'
+        'order'             => 'ASC',
+        'category_name'     => 'services'
     );
 
     $services_query = new WP_Query( $args );

@@ -5,8 +5,9 @@
 		'post_type' 		=> 'post',
 		'post_status' 		=> 'publish',
 		'posts_per_page' 	=> 6,
-		'orderby'			=> 'date',
-		'order'				=> 'ASC'
+		'orderby'			=> 'title',
+		'order'				=> 'ASC',
+		'category_name'		=> 'services'
 	);
 
 	$services_query = new WP_Query( $args );

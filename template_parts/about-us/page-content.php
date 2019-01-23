@@ -11,12 +11,12 @@
 				<div class="about-us-items">
 					<?php  
 						$args = array(
-							'post_type' 		=> 'page',
+							'post_type' 		=> 'post',
 							'post_status' 		=> 'publish',
 							'posts_per_page' 	=> -1,
-							'orderby'			=> 'menu_order',
+							'orderby'			=> 'title',
 							'order'				=> 'ASC',
-							'post_parent'		=> $post->ID
+							'category_name'		=> 'staff'
 						);
 
 						$aboutUs_query = new WP_Query( $args );
