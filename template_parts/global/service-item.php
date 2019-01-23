@@ -6,5 +6,5 @@
 	<div class="link-more">
 		Find out more
 	</div>
-	<a href="<?php the_permalink(); ?>"></a>
+	<a href="<?php the_permalink(); ?>" title = "<?php the_title(); ?>"></a>
 </div>

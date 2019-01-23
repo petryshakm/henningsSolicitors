@@ -8,7 +8,7 @@ if ($get_in_touch_text) {
 			<div class="row">
 				<div class="col-lg-12">
 					<h2 class = "hide-element">Get in touch</h2>
-					<img src="<?php bloginfo('template_url'); ?>/img/seahorse.svg" alt="">
+					<img src="<?php bloginfo('template_url'); ?>/img/seahorse.svg" alt="Hennings Solicitors">
 					<p>
 						<?php echo $get_in_touch_text; ?>
 					</p>

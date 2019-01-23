@@ -1,4 +1,5 @@
 <section class="section-content">
+	<h2 class="hide-element">Service content</h2>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12">

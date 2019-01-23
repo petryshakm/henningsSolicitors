@@ -10,12 +10,12 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body <?php body_class(); ?>>
+<h1 class="hide-element"><?php bloginfo('name'); ?></h1>
 	<div class="wrapper">
 		<header>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="hide-element">Navigation</h2>
 						<?php logotype(); ?>
 						<div class="header-right">
 							<?php wp_nav_menu( array('theme_location' => 'header_menu', 'container' => false, 'items_wrap ' => '')); ?>

@@ -206,7 +206,7 @@ google.maps.event.addDomListener(window, 'load', init);
 		map: map,
 		title: 'Snazzy!',
 		icon: {
-			url: "img/marker.png",
+			url: "https://badlamb-stage.co.uk/wp-content/themes/hennings_solicitors_theme/img/marker.png",
 		}
 	});
 	/*---------------content maps---------------*/
@@ -223,17 +223,5 @@ google.maps.event.addDomListener(window, 'load', init);
 		infowindow.open(map, marker);
 	});
 
-	// marker 2
-	var contentString_2 = '<div class="content-map">'+
-	'<p>м. Title 2</p>' +
-	'</div>';
-
-	var infowindow_2 = new google.maps.InfoWindow({
-		content: contentString_2
-	});
-
-	marker_2.addListener('click', function() {
-		infowindow_2.open(map, marker_2);
-	});
 	/*---------------content maps---------------*/
 }

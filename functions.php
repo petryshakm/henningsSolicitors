@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------------styles and scripts
 
 function add_style() {
-	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/plugins/bootstrap.css' );
 	wp_enqueue_style( 'base_style', get_stylesheet_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	wp_enqueue_style( 'roboto-slab-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700' );
@@ -14,7 +13,7 @@ function enqueue_scripts() {
 	wp_register_script( 'function', get_template_directory_uri() . '/js/function.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'function' );
 
-	wp_register_script( 'theme_settings', get_template_directory_uri() . '/js/theme-settigns.js', array( 'jquery' ), '1.0', true );
+	wp_register_script( 'theme_settings', get_template_directory_uri() . '/js/theme-settings.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'theme_settings' );
 
 	if ( is_page_template(array('template-contact.php')) ) {
@@ -69,12 +68,11 @@ require_once ( get_template_directory() .'/functions/customizr.php' );
 require_once ( get_template_directory() .'/functions/metaboxes.php' );
 
 
-
 // styles for customizer theme options
 add_action( 'admin_enqueue_scripts', 'admin_css');
 function admin_css(){
-	wp_register_style('admin_css', get_bloginfo('template_url').'/css/admin_css.css', false, '1.0.0');
-	wp_enqueue_style('admin_css');
+	wp_register_style('admin_styles', get_bloginfo('template_url').'/css/admin_styles.css', false, '1.0.0');
+	wp_enqueue_style('admin_styles');
 }
 
 //------------------------------------------------------------------------------------menus
