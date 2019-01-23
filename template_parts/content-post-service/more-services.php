@@ -8,7 +8,9 @@ if (!empty($more_services)) {
 	    'post_status'       => 'publish',
 	    'orderby'           => 'date',
 	    'order'             => 'ASC',
-	    'post__in'			=> $more_services
+	    'post__in'			=> $more_services,
+        'post__not_in'      => array($post->ID)
+	    
 	);
 
 	$services_query = new WP_Query( $args );
@@ -18,7 +20,7 @@ if (!empty($more_services)) {
 			<h3>More services</h3>
 			<div class="more-services-items">';
 			    while ( $services_query->have_posts() ) { $services_query->the_post();
-					get_template_part('template_parts/content-page-service/service-item-simple');
+					get_template_part('template_parts/content-post-service/service-item-simple');
 			    }
 		echo '</div>';
 	}

@@ -44,6 +44,9 @@ Text Domain: hennings-solicitors-theme
 	color: #07A7DD;
 }
 
+.hide-element{
+	display: none;
+}
 
 
 /*--------------------------------------------contact page */

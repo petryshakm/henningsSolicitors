@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<article>
-					<?php get_template_part( 'template_parts/content-page-service/post-thumbnail' ); ?>
+					<?php get_template_part( 'template_parts/content-post-service/post-thumbnail' ); ?>
 					
 					<?php if(have_posts()) : ?>
 						<?php while(have_posts()) : the_post(); ?>	
@@ -12,7 +12,7 @@
 						<?php endwhile; ?>
 					<?php endif; ?>
 
-					<?php get_template_part( 'template_parts/content-page-service/more-services' ); ?>
+					<?php get_template_part( 'template_parts/content-post-service/more-services' ); ?>
 				</article>
 
 				<?php get_sidebar(); ?>

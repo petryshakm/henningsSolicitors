@@ -27,7 +27,8 @@ function more_services($post){
         'posts_per_page'    => -1,
         'orderby'           => 'date',
         'order'             => 'ASC',
-        'category_name'     => 'services'
+        'category_name'     => 'services',
+        'post__not_in'      => array($post->ID)
     );
 
     $services_query = new WP_Query( $args );

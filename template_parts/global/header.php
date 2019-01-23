@@ -15,6 +15,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
+						<h2 class="hide-element">Navigation</h2>
 						<?php logotype(); ?>
 						<div class="header-right">
 							<?php wp_nav_menu( array('theme_location' => 'header_menu', 'container' => false, 'items_wrap ' => '')); ?>
