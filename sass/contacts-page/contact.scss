@@ -6,6 +6,7 @@
 	.row-top{
 		display: flex;
 		justify-content: space-between;
+		align-items:flex-start;
 		margin-bottom: 30px;
 		margin-bottom: 90px;
 		&:after{
@@ -34,16 +35,18 @@
 	.contact-info{
 		h5, .h5{
 			margin-bottom: 10px;
+			font-size: 24px;
 		}
 		ul{
 			margin-bottom: 30px;
+			font-size: 17px;
 			li{
 				margin-bottom: 5px;
 			}
 		}
 	}
 	.col-lg-5{
-		padding: 40px 40px 20px;
+		padding: 25px 40px;
 		font-size: 14px;
 		background-color: #fafafa;
 		a:hover{

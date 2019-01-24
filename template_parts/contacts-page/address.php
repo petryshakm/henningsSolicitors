@@ -1,4 +1,4 @@
-<?php $footer_address = (( get_theme_mod('footer_address') ) ? '<p>'.get_theme_mod('footer_address').'</p>' : ''); ?>
+<?php $footer_address = (( get_theme_mod('footer_address') ) ? '<ul><li>'.get_theme_mod('footer_address').'</li></ul>' : ''); ?>
 
 <h5>
 	Address

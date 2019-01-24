@@ -222,6 +222,5 @@ google.maps.event.addDomListener(window, 'load', init);
 	marker.addListener('click', function() {
 		infowindow.open(map, marker);
 	});
-
 	/*---------------content maps---------------*/
 }

@@ -1,0 +1,93 @@
+.section-personal{
+	padding: 93px 0 0;
+	.container-fluid{
+		max-width: 1200px;
+	}
+	.row-top{
+		display: flex;
+		justify-content: space-between;
+		align-items:flex-start;
+		margin-bottom: 30px;
+		margin-bottom: 90px;
+		&:after{
+			content: none;
+		}
+		.col-lg-7{
+			width: 60%;
+		}
+		.col-lg-5{
+			width: 35%;
+		}
+	}
+	form{
+		p{
+			font-size: 14px;
+			a{
+				color: $color-blue;
+				text-decoration: underline;
+				display: inline-block;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.contact-info{
+		h5, .h5{
+			margin-bottom: 10px;
+			font-size: 24px;
+		}
+		ul{
+			margin-bottom: 30px;
+			font-size: 17px;
+			li{
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.col-lg-5{
+		padding: 25px 40px;
+		font-size: 14px;
+		background-color: #fafafa;
+		a:hover{
+			color: $color-blue;;
+		}
+	}
+	.personal-items{
+		display: block;
+		.item{
+			margin-bottom: 50px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		h2, .h2{
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.flex-block{
+			display: flex;
+			justify-content: space-between;
+			.img{
+				width: 200px;
+				img{
+					width: 100%;
+				}
+			}
+			.text{
+				width: calc(100% - 230px);
+			}
+			p{
+				margin-bottom: 10px;
+			}
+			a{
+				color: $color-blue;
+				text-decoration: underline;
+				display: inline-block;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

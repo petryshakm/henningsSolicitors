@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------------styles and scripts
 
 function add_style() {
-	wp_enqueue_style( 'base_style', get_stylesheet_directory_uri() . '/css/style.css' );
+	// wp_enqueue_style( 'base_style', get_stylesheet_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	wp_enqueue_style( 'roboto-slab-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700' );
 }
@@ -121,11 +121,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 
-// if ( function_exists( 'add_image_size' ) ) {
-// 	add_image_size( 'category-thumb', 300, 9999 ); // 300 width and any height
-// 	// add_image_size( 'homepage-thumb', 220, 180, true ); // Crop the image
-// 	// add_image_size( 'homepage-thumb', 220, 180, array( 'top', 'left' ) ); // crop position
-// }
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'staff-inner-thumb', 200, 9999 ); // 200 width and any height
+}
 
 //------------------------------------------------------------------------------------remove generator meta
 remove_action( 'wp_head', 'wp_generator' );

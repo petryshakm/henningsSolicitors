@@ -1,0 +1,19 @@
+.section-personal{
+	padding-top: 60px;
+}
+.section-personal .row-top{
+	display: block;
+	margin-bottom: 0;
+}
+.section-personal .row-top .col-lg-7{
+	margin-bottom: 40px;
+}
+.section-personal .row-top .col-lg-7,
+.section-personal .row-top .col-lg-5{
+	width: 100%;
+}
+.section-personal .row-top .col-lg-5{
+	margin-left: -15px;
+	width: calc(100% + 30px);
+	padding: 20px 30px;
+}
