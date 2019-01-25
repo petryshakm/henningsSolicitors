@@ -40,12 +40,6 @@
 }
 .section-welcome{
 	background-color: #ecf5f6;
-	direction: rtl;
-	.container-fluid{
-		margin: 0;
-		direction: ltr;
-		max-width: 100%;
-	}
 	h2, .h2{
 		margin-bottom: 42px;
 	}
@@ -56,19 +50,21 @@
 	}
 	.items{
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: flex-end;
 		text-align: center;
-		//width: 1527px;
 		width: calc(100% + 15px);
 		.item{
 			&:first-child{
-				width: 39%;
-				padding: 20px 0;
+				width: 50%;
+				padding: 157px  20px 157px 15px;
+				max-width: 709px;
 			}
 			&:nth-child(2){
-				width: 52.1%;
+				width: calc(50% + 15px);
+				background-size: cover;
+				background-position: 50%;
 				img{
+					display: none;
 					width: 100%;
 				}
 			}

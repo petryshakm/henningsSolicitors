@@ -19,3 +19,23 @@ footer .top .items .item:first-child{
 .section-title h1, .section-title .h1{
 	font-size: 38px;
 }
+header .logo{
+	width: 50px;
+	height: auto;
+	overflow: hidden;
+}
+header .logo img{
+	width: 151px;
+}
+header ul{
+	font-size: 18px;
+}
+header .header-right ul{
+	top: -1px;
+}
+header ul li{
+	margin-left: 15px;
+}
+header ul li span{
+	display: none;
+}

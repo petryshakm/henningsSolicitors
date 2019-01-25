@@ -16,4 +16,22 @@ jQuery(document).ready(function($) {
 	$('footer').after(clone_phone)
 
 
+	//section-welcome
+	var src_img = $('.section-welcome .items .item:nth-child(2)').find('img').attr('src');
+	$('.section-welcome .items .item:nth-child(2)').css('background-image', 'url(' + src_img + ')');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
