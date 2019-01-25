@@ -3,6 +3,8 @@
 
 <?php get_template_part( 'template_parts/main_page/get-in-touch-section' ); ?>
 
+<?php get_template_part( 'template_parts/main_page/welcome-section' ); ?>
+
 <?php get_template_part( 'template_parts/main_page/our-services-section' ); ?>
 
 <?php get_template_part( 'template_parts/main_page/get-in-touch-text' ); ?>

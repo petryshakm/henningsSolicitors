@@ -38,3 +38,41 @@
 		color: #00757f;
 	}
 }
+.section-welcome{
+	background-color: #ecf5f6;
+	direction: rtl;
+	.container-fluid{
+		margin: 0;
+		direction: ltr;
+		max-width: 100%;
+	}
+	h2, .h2{
+		margin-bottom: 42px;
+	}
+	p{
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 24px;
+	}
+	.items{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		//width: 1527px;
+		width: calc(100% + 15px);
+		.item{
+			&:first-child{
+				width: 39%;
+				padding: 20px 0;
+			}
+			&:nth-child(2){
+				width: 52.1%;
+				img{
+					width: 100%;
+				}
+			}
+
+		}
+	}
+}

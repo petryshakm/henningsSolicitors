@@ -161,6 +161,122 @@ add_action('save_post', 'save_get_in_touch_text');
 
 
 
+//------------------------------------------------------------------------------------------Welcome text
+function add_welcome_section() {
+    global $post;
+    if ( 'template-home.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+        add_meta_box(
+            'welcome_section',           
+            'Welcome to Hennings Solicitors',  
+            'welcome_section', 
+            'page'
+        );
+    }
+}
+add_action('add_meta_boxes', 'add_welcome_section');
+
+
+function welcome_section($post){
+    $value = get_post_meta($post->ID, 'welcome_section', true);
+    ?>
+    <?php 
+    $content = $value;
+    $editor_id = 'welcome_section_editor';
+    $settings =   array(
+        'wpautop' => true, // use wpautop?
+        'media_buttons' => false, 
+        'textarea_name' => $editor_id, 
+        'textarea_rows' => 5, 
+        'tinymce' => true, 
+    );
+    wp_editor( $content, $editor_id, $settings );
+}
+
+
+function save_welcome_section($post_id)
+{
+    update_post_meta(
+        $post_id,
+        'welcome_section',
+        $_POST['welcome_section_editor']
+    );
+}
+add_action('save_post', 'save_welcome_section');
+
+
+//------------------------------------------------------------------------------------------About us
+function add_about_us_link() {
+    global $post;
+    if ( 'template-home.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+        add_meta_box(
+            'about_us_link',           
+            'About us link',  
+            'about_us_link', 
+            'page'
+        );
+    }
+}
+add_action('add_meta_boxes', 'add_about_us_link');
+
+
+function about_us_link($post){
+    $value = get_post_meta($post->ID, 'about_us_link', true);
+    ?>
+    <label for="about_us_link">About us link</label>
+    <input style = "width: 100%;" type = "text" name = "about_us_link" id = "about_us_link" value = "<?php echo $value; ?>">
+    <?php
+}
+
+
+function save_about_us_link($post_id)
+{
+    if (array_key_exists('about_us_link', $_POST)) {
+        update_post_meta(
+            $post_id,
+            'about_us_link',
+            $_POST['about_us_link']
+        );
+    }
+}
+add_action('save_post', 'save_about_us_link');
+
+//------------------------------------------------------------------------------------------More services link
+function add_welcome_image() {
+    global $post;
+    if ( 'template-home.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+        add_meta_box(
+            'welcome_image',           
+            'Welcome image',  
+            'welcome_image', 
+            'page'
+        );
+    }
+}
+add_action('add_meta_boxes', 'add_welcome_image');
+
+
+function welcome_image($post){
+    $value = get_post_meta($post->ID, 'welcome_image', true);
+    ?>
+    <label for="welcome_image">Image url</label>
+    <input style = "width: 100%;" type = "text" name = "welcome_image" id = "welcome_image" value = "<?php echo $value; ?>">
+    <?php
+}
+
+
+function save_welcome_image($post_id)
+{
+    if (array_key_exists('welcome_image', $_POST)) {
+        update_post_meta(
+            $post_id,
+            'welcome_image',
+            $_POST['welcome_image']
+        );
+    }
+}
+add_action('save_post', 'save_welcome_image');
+
+
 
 
 ?>

@@ -2,3 +2,20 @@
 	font-size: 40px;
 	line-height: 45px;
 }
+.section-welcome .items{
+	display: block;
+}
+.section-welcome .items .item:nth-child(2){
+	display: none;
+}
+.section-welcome .container-fluid{
+	max-width: 100% !important;
+}
+.section-welcome .items{
+	display: block;
+	width: 100%;
+}
+.section-welcome .items .item:first-child{
+	width: 100%;
+	padding: 50px 0 ;
+}
