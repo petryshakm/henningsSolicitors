@@ -1,7 +1,7 @@
 <?php 
 $welcome_section = get_post_meta( $post->ID, 'welcome_section', true );
 $about_us_link = get_post_meta( $post->ID, 'about_us_link', true );
-$welcome_image = get_post_meta( $post->ID, 'welcome_image', true );
+// $welcome_image = get_post_meta( $post->ID, 'welcome_image', true );
 
 ?>
 <section class="section-welcome">
@@ -17,7 +17,7 @@ $welcome_image = get_post_meta( $post->ID, 'welcome_image', true );
 			<?php } ?>
 		</div>
 		<div class="item">
-			<?php echo simple_image_output($welcome_image, 'Welcome to Hennings Solicitors', ''); ?>
+			<?php the_post_thumbnail( $size = 'full' ); ?>
 		</div>
 	</div>
 </section>

@@ -240,43 +240,5 @@ function save_about_us_link($post_id)
 }
 add_action('save_post', 'save_about_us_link');
 
-//------------------------------------------------------------------------------------------More services link
-function add_welcome_image() {
-    global $post;
-    if ( 'template-home.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-        add_meta_box(
-            'welcome_image',           
-            'Welcome image',  
-            'welcome_image', 
-            'page'
-        );
-    }
-}
-add_action('add_meta_boxes', 'add_welcome_image');
-
-
-function welcome_image($post){
-    $value = get_post_meta($post->ID, 'welcome_image', true);
-    ?>
-    <label for="welcome_image">Image url</label>
-    <input style = "width: 100%;" type = "text" name = "welcome_image" id = "welcome_image" value = "<?php echo $value; ?>">
-    <?php
-}
-
-
-function save_welcome_image($post_id)
-{
-    if (array_key_exists('welcome_image', $_POST)) {
-        update_post_meta(
-            $post_id,
-            'welcome_image',
-            $_POST['welcome_image']
-        );
-    }
-}
-add_action('save_post', 'save_welcome_image');
-
-
-
 
 ?>
