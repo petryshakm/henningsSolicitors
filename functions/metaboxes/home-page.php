@@ -241,4 +241,15 @@ function save_about_us_link($post_id)
 add_action('save_post', 'save_about_us_link');
 
 
+
+//------------------------------------------------------------------------------------------hide default editor
+add_action( 'admin_init', 'hide_editor' );
+function hide_editor() {
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+    if( !isset( $post_id ) ) return;
+    if ( 'template-home.php' == get_post_meta( $post_id, '_wp_page_template', true ) ) {
+        remove_post_type_support('page', 'editor');
+    }
+}
+
 ?>
