@@ -1,14 +1,14 @@
 <?php  
 
-//------------------------------------------------------------------------------------------main title
+//------------------------------------------------------------------------------------------More services checkboxes
 function add_more_services() {
 
     global $post;
     if (has_category( 'services', $post)) {
         add_meta_box(
-            'more_services',           
-            'More services',  
-            'more_services', 
+            'more_services',
+            'More services',
+            'more_services',
             'post'
         );
     }
@@ -61,8 +61,7 @@ function more_services($post){
 }
 
 
-function save_more_services($post_id)
-{
+function save_more_services($post_id){
     if (array_key_exists('more_services', $_POST)) {
         update_post_meta(
             $post_id,
@@ -73,6 +72,12 @@ function save_more_services($post_id)
 }
 add_action('save_post', 'save_more_services');
 
+
+// ----------------------------------------------------------------------------------post order
+function filter_function_name() {
+    add_post_type_support( 'post', 'page-attributes' );
+}
+add_filter( 'admin_init', 'filter_function_name', 10, 2 );
 
 
 

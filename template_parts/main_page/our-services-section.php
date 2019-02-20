@@ -4,10 +4,11 @@
 	$args = array(
 		'post_type' 		=> 'post',
 		'post_status' 		=> 'publish',
-		'posts_per_page' 	=> 6,
-		'orderby'			=> 'title',
+		'posts_per_page' 	=> -1,
+		'orderby'			=> 'menu_order',
 		'order'				=> 'ASC',
-		'category_name'		=> 'services'
+		'category_name'		=> 'services',
+		'tag'				=> 'home'
 	);
 
 	$services_query = new WP_Query( $args );
@@ -20,7 +21,7 @@
 						<h2>
 							Our Services
 						</h2>
-						<div class="services-items items-more">
+						<div class="services-items">
 							<?php  
 								while ( $services_query->have_posts() ) { $services_query->the_post();
 									get_template_part('template_parts/global/service-item');
