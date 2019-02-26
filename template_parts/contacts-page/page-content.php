@@ -2,6 +2,11 @@
 	<div class="container-fluid">
 		<div class="row row-top">
 			<div class="col-lg-7">
+				<?php if(have_posts()) : ?>
+				<?php while(have_posts()) : the_post(); ?>	
+				<?php the_content(); ?>
+				<?php endwhile; ?>
+				<?php endif; ?>
 				<?php echo do_shortcode('[contact-form-7 id="63" title="Contact form 1" html_class = "use-floating-validation-tip"]'); ?>
 			</div>
 

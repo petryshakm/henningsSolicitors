@@ -82,6 +82,25 @@ add_filter( 'admin_init', 'filter_function_name', 10, 2 );
 
 
 
+//-----------------------------------------------------------------------------------output order value in the wp-admin post columns
+add_filter('manage_posts_columns', 'posts_columns_order', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns_order', 5, 2);
+
+function posts_columns_order($defaults){
+    $defaults['menu_order'] = __('Order');
+    return $defaults;
+}
+function posts_custom_columns_order($column_name, $id){
+    global $post;
+
+    if ( has_category('services', $post) ) {
+        if($column_name === 'menu_order'){
+            $order = $post->menu_order;
+            echo $order;
+        }
+    }
+}
+
 
 
 ?>
