@@ -90,7 +90,7 @@ add_action( 'init', 'register_menus' );
 //------------------------------------------------------------------------------------logotype
 function logotype(){
 	
-	$logo_path = get_bloginfo('template_url').'/img/logo.png';
+	$logo_path = get_bloginfo('template_url').'/img/HS_Logo.svg';
 	
 	echo '<div class="logo">';
 		if (is_front_page()){ 
