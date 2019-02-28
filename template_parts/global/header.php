@@ -14,7 +14,7 @@
 	}, false );
 	</script>
 </head>
-<body <?php body_class(); ?>>g
+<body <?php body_class(); ?>>
 <h1 class="hide-element"><?php bloginfo('name'); ?></h1>
 	<div class="wrapper">
 		<header>

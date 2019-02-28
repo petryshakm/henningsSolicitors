@@ -17,7 +17,7 @@ $social_links_html .= '</div>';
 
 
 
-<h5>
+<!-- <h5>
 	Follow Us
-</h5>
-<?php echo $social_links_html; ?>
+</h5> -->
+<?php //echo $social_links_html; ?>
